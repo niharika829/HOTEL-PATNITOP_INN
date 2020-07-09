@@ -1,0 +1,150 @@
+h1{
+    display: inline;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Monoton', cursive;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.menu{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+}
+
+.menu:hover{
+    background: #333;
+    color: white;
+}
+
+.intro2{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Dancing Script', cursive;
+    color: goldenrod;
+}
+
+.bg{
+    background:linear-gradient(0deg,rgba(8, 8, 8, 0.5),rgba(12, 12, 12, 0.5)),url('./images/antique-backdrop-background-131639.jpg');
+}
+
+.bg2{
+    background:linear-gradient(0deg,rgba(8, 8, 8, 0.5),rgba(12, 12, 12, 0.5)),url('./images/antique-backdrop-background-132199.jpg');
+}
+
+.bg3{
+    background:linear-gradient(0deg,rgba(8, 8, 8, 0.5),rgba(12, 12, 12, 0.5)),url('./images/antique-backdrop-background-168438.jpg');
+}
+
+.img-container { 
+    background-color: #000000; 
+}
+.img-container img { 
+    opacity: 0.5; 
+}
+
+.dish{
+    font-family: 'Luckiest Guy', cursive; color:goldenrod;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.price{
+    font-family: 'Lobster', cursive;
+    color: wheat;
+    font-size: 30px;
+}
+
+.check:checked{
+        background: red;
+}
+
+.chck {
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 9px #999;
+}
+  
+.chck:hover {background-color: yellow}
+  
+.chck:active {
+    background-color: darkgoldenrod;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.footer{
+    background-color: #696969}
+
+.btn-facebook {
+    background: #3B5998;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #263961; 
+}
+.btn-facebook:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+
+.btn-google {
+    background: #DD4B39;
+    color: white;
+}
+
+.btn-google:hover{
+    color: #e64522;
+    background: #fff;
+    border-color: #e64522;
+}
+
+.btn-linkedin {
+    background: #0E76A8;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #084461;
+}
+
+.btn-linkedin:hover{
+    color: #0094BC;
+    background: #fff;
+    border-color: #0094BC;
+}
+
+.btn-twitter {
+    background: #00ACEE;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0075a2;
+}
+
+.btn-twitter:hover{
+    color: #00ABE3;
+    background: #fff;
+    border-color: #00ABE3;
+}
+
+.e{
+    background-color: white;
+}

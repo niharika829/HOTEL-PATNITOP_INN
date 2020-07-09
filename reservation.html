@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="main.jpg" type="image/gif" sizes="16x16">
+    <title>Reservation --The Patnitop Inn</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Main Styling -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="reservation.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Norican&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Lobster+Two|Trochut&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+      var x;
+      var y=0;
+      function pay(){
+        y=Number(document.getElementById(x).value);
+        var queryString="?"+y;
+        window.location.href = "payment.html"+queryString; 
+      }
+
+      function check(checked){
+        x=checked;
+      }
+
+    </script>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg" style="background-color: goldenrod;">
+        <a class="navbar-brand" href="./bootstrap/index1.html"><img src="main.jpg" style="height:60px"></a>
+        <a class="navbar-brand" href="#" style="color: black;">The Patnitop Inn</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" style="border-color: white;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item right">
+                    <a class="nav-link menu" href="./bootstrap/index1.html">Home</a>
+                </li>
+                <li class="nav-item right">
+                    <a class="nav-link menu" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item right">
+                    <a class="nav-link menu" href="./html/linens.html">Linens</a>
+                </li>
+                <li class="nav-item right">
+                    <a class="nav-link menu" href="loginsignup.html">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+   <div class="banner">
+       <div class="contain">
+            <p class="display-1 intro d-none d-md-block">Make a Reservation</p>
+            <h3 class="intro2" style="color: goldenrod;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, sapiente!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </h3>
+       </div>
+   </div> 
+
+   <div class="about">
+       <div class="container">
+           <div class="row about2">
+               <div class="col-md-6">
+                   <img src="./images/about.jpg" alt="" class="img-fluid">
+               </div>
+               <div class="col-md-6">
+                    <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non culpa aut, quae quaerat quas consectetur
+                       nesciunt sapiente officiis blanditiis dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil 
+                       amet assumenda similique exercitationem impedit aliquid cupiditate hic, perspiciatis ut corrupti magnam eligendi,
+                       laborum vitae eaque. Mollitia qui blanditiis placeat debitis reiciendis, deserunt fugiat ducimus voluptatem 
+                       laudantium esse distinctio dolorem in rem ut nihil dolore voluptates corporis quae possimus, incidunt iusto.</p>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <hr>
+
+   <div class="about4">
+        <div class="row">
+            <div class="col-12">
+                <p data-aos="fade-right">We deal with different categories of booking</p>
+                <p style="margin-top: 0px;" data-aos="fade-left">Choose the one as per your comfort</p>
+            </div>
+        </div>
+   </div>
+
+   <div class="container mt-5 card2">
+       <div class="row">
+           <div class="col-md-6">
+                <div class="card text-white bg-danger mb-3" style="max-width: 27rem;" data-aos="fade-right">
+                    <div class="card-header card1">Special Events and Private Parties</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Honor us by adding more sparkel to your event</h5>
+                      <p class="card-text">Catering and Events are opportunities for us to work more closely with our guests, occasions 
+                                           for us to share our dedication to celebration in exciting new ways.</p>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoAboutDishes" value="100" id="hallA" onclick="check(this.id)">Upto 60 ($ 100)</button>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoAboutDishes" value="40" id="hallB" onclick="check(this.id)">Upto 15 ($ 40)</button>
+                      <a href="#info" class="btn btn-warning ml-2">Hall Info</a>
+                      
+                    </div>
+                </div>
+           </div>
+
+           <div class="col-md-6">
+                <div class="card text-white bg-info mb-3" style="max-width: 27rem;" data-aos="fade-left">
+                    <div class="card-header card1">For Family</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Honor us by adding more sparkel to your event</h5>
+                      <p class="card-text">We even provide pre-booking for the breakfast, lunch, dinner so that you can enjoy your meals 
+                                           without even bothering about the checking of menu before coming.</p>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoAboutDishes" value="10" id="solo" onclick="check(this.id)">Individual ($ 10)</button>
+                      <!-- <a href="#" class="btn btn-success" id="solo" onclick="check(this.id)" value="10">Book ($ 10)</a> -->
+                    </div>
+                </div>
+           </div>
+       </div>
+   </div>
+
+   <!--Modal-->
+   <div class="modal fade" id="infoAboutDishes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Do You Know??</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, obcaecati, eos facilis dolores animi voluptates iusto rem 
+           aliquid nihil ullam, quidem voluptate facere in natus consequatur? Blanditiis, soluta libero. Hic in magnam minima repudiandae 
+           non sapiente laboriosam ipsam aut, veritatis illo quis officia inventore! Officiis fugiat tempora harum facilis pariatur quia 
+           sint? Saepe aut ea corrupti eius itaque temporibus facere enim tempore consectetur ratione. Nisi nobis doloremque accusamus 
+           voluptate ut eius nulla minus officia repellendus porro iusto rerum ex blanditiis, explicabo iure? Corrupti, fugit harum. Quod 
+           recusandae cupiditate iste reiciendis vitae est architecto, error debitis perspiciatis mollitia aliquam? Necessitatibus, illum.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="pay()">Proceed Anyway</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="location.href='menu.html'">View Menu</button>
+          </div>
+        </div>
+      </div>
+   </div>
+
+   <div class="reservePic">
+       <div class="container">
+           <img src="./images/reserve.jpg" alt="" class="img-fluid mt-5" data-aos="zoom-in">
+       </div>
+   </div>
+
+   <hr>
+
+   <div class="reserveInfo mt-5" id="info">
+       <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="flip-up">
+                    <h1 style="font-family: 'Berkshire Swash', cursive;">The Big Room</h1>
+                    <h3 class="text-muted">Seats upto 60</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, perspiciatis alias! Rerum possimus saepe vero soluta
+                    similique, ratione, cum neque ullam officiis id, accusamus ea eum doloribus? Eius optio quam dolore accusantium nihil 
+                    alias iure fugit aut, soluta est, repudiandae magni minima debitis aspernatur tempore nulla velit, iste doloribus commodi.</p>
+                    <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolor necessitatibus 
+                        laboriosam delectus incidunt corrupti tempore maiores amet nam id.</p>
+                </div>
+                <div class="col-md-6" data-aos="flip-up">
+                    <h1 style="font-family: 'Berkshire Swash', cursive;">The Small Room</h1>
+                    <h3 class="text-muted">Seats upto 15</h3>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, perspiciatis alias! Rerum possimus saepe vero soluta
+                    similique, ratione, cum neque ullam officiis id, accusamus ea eum doloribus? Eius optio quam dolore accusantium nihil 
+                    alias iure fugit aut, soluta est, repudiandae magni minima debitis aspernatur tempore nulla velit, iste doloribus commodi.</p>
+                    <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolor necessitatibus 
+                        laboriosam delectus incidunt corrupti tempore maiores amet nam id.</p>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <hr>
+
+   <div class="call mt-5">
+       <div class="container">
+           <h3 class="text-muted text-center" style="font-family: 'Berkshire Swash', cursive;">By Phone</h3>
+           <h5 class="text-center">Call (347) 555-1234 to reserve a room or a table for your celebration.</h5>
+       </div>
+   </div>
+
+  
+  
+    <div class="footer" style="height: 500px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="text-center text-bold display-3 mt-5" style="color: white; font-family: 'Lobster Two', cursive;" data-aos="zoom-in">The Patnitop Inn</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center mt-5 text-bold" style="color: yellow; font-size: 25px; font-family:Dancing Script, cursive;">Where to find Us?</p>
+            </div>
+          </div>
+          <div class="row mt-5">
+              <div class="col-12 text-center">
+                  <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-2x"></i></a>
+                  <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-2x"></i></a>
+                  <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-2x"></i></a>
+                  <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-2x"></i></a>
+                  <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-2x"></i></a>
+                  <a class="btn btn-social-icon e" href="mailto:priyanshigupta997@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+              </div>
+          </div>
+        </div>
+    </div>
+      
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>     
+</body>
+</html>

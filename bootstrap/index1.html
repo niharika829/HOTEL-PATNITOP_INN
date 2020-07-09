@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to the Patnitop Inn</title>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		body{
+			background-image: url('image/12.jpg');
+			  height: 100%;
+              background-repeat:repeat;
+              background-position:  right-top;
+              background-attachment: fixed;
+		}
+		.inner{
+			overflow: hidden;
+		}
+		.inner img{
+			transition: all 1.5s ease;
+		}
+		.inner:hover img{
+			transform: scale(1.5);
+		}
+		.card{
+			overflow: hidden;
+		}
+		.card:hover{
+			transform: scale(1.1);
+		}
+		.img-contact{
+  		background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('image/h2.jpg');
+  		background-size: fixed;
+  	}
+	</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top"> 
+	<div class="container">
+	    <a href="#" class="navbar-brand">THE PATNITOP INN</a>
+	     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+	     	<span class="navbar-toggler-icon"></span>
+	     </button>
+	    <div class="collapse navbar-collapse" id="navbarid">
+           <ul class="navbar-nav text-center ml-auto">
+		    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+		    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+		    <li class="nav-item"><a href="#amenities" class="nav-link">Amenities</a></li>
+		    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+			<li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>
+			<li class="nav-item"><a href="../index.html" class="nav-link">Menu</a></li>
+			<li class="nav-item"><a href="../html/linens.html" class="nav-link">Linens</a></li>
+	       </ul>
+	    </div>
+	</div>
+</nav>
+<!------------------------------------------VIDEO---------------------------------------------------------------->
+
+<div class="embed-responsive embed-responsive-16by9" id="home">
+	<video width="100%" autoplay loop  muted><source src="image/video.mp4" type="video/mp4"</video>
+</div><br>
+<!--------------------------------AMENITIES------------------------------------------------------------------------>
+		<h2 class="text-center text-white bg-dark font-italic" id="amenities"> AMENITIES</h2><br>
+<div class="container-fluid">
+		<div class="card-columns bg-transparent  row"> 
+		     <div class="card col-lg-5 col-md-5 col-sm-5 col-12 m-auto" >
+		     	<div class="inner">
+		         <img src="image/10.jpg" class="card-img img-fluid" style="height: 150px;"></div>
+		         <div class="card-body">
+			     <h4 class="card-title text-center">LINENS</h4>
+			     <p class="card-text"> We have categorized the rooms into different types such as, Single Seater, Double Seater etc. Each of these halls is spacious, beautifully furnished and equipped with world-class facilities to suit your needs.</p>
+			     <a href="../html/linens.html" class="btn btn-danger btn-outline-danger">BOOK NOW</a>
+		         </div>
+
+		     </div>
+		     <div class="card col-lg-5 col-md-5 col-sm-5 col-12 m-auto" >
+		     	<div class="inner">
+		        <img src="image/d1.jpg" class="card-img img-fluid" style="height: 150px;"></div>
+		        <div class="card-body">
+			    <h4 class="card-title text-center">DINNING</h4>
+			    <p class="card-text"> The menu of the restaurant encompasses both, light snacks and complete meals. A well laid out executive buffet for lunch and the lavish dinner buffet, offer a wide variety of choice to satisfy all needs.</p>
+			    <a href="../index.html"  class="btn btn-outline-danger btn-danger">BOOK NOW</a>
+		        </div>
+		
+		    </div>
+	    </div>
+    </div>
+    <br>
+  <!------------------------------------------------------GALLERY-------------------------------------------------->
+    <div class="text-center bg-dark " id="gallery">
+	<a href="gallery.html" class=" text-white font-italic font-weight-bold " style="font-size: 30px;" >GALLERY</a><span><i class="far fa-smile-beam fa-spin" style="color:red;font-size: 2rem;"></i></span>
+</div>
+<div class="carousel slide" id="myslider" data-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="image/h1.jpg" alt="1.jpg" style="height: 500px;width: 100%; margin-top: 30px;">
+			<div class="carousel-caption">
+				<h2 >THE PATNITOP INN</h2>
+				<p class=" badge badge-info">Welcome to Hotel The Patnitop Inn.</p>
+			</div>
+			
+		</div>
+			<div class="carousel-item ">
+			<img src="image/1.jpg" alt="1.jpg" style="height: 500px; width: 100%; margin-top: 30px;">
+			<div class="carousel-caption">
+				<h2>THE PATNITOP INN</h2>
+				<p class=" badge badge-dark ">The Patnitop Inn Hotel, a landmark of Elegance and Comfort, is the pioneer of luxury hotels in the business city of India.</p><!--badge for highlight the sentence-->
+			</div>
+			
+		</div>
+			<div class="carousel-item">
+			<img src="image/d1.jpg" alt="1.jpg" style="height: 500px; margin-top: 30px; width: 100%">
+			<div class="carousel-caption">
+				<h2>THE PATNITOP INN</h2>
+				<p class=" badge badge-warning">We offer superlative standards of comfort and luxury complemented with a variety of restaurants offering delectable cuisines of the world.</p>
+			</div>
+			
+		</div>
+		<div class="carousel-item">
+			<img src="image/w5.jpg" alt="1.jpg" style="height: 500px; margin-top: 30px; width: 100%">
+			<div class="carousel-caption">
+				<h2>THE PATNITOP INN</h2>
+				<p>The Patnitop Inn Hotel in India boasts of its outstanding service, promising comfort which makes our 5-star business hotel.</p>
+			</div>
+			
+		</div>
+		<div class="carousel-item">
+			<img src="image/c3.jpg" alt="1.jpg" style="height: 500px; margin-top: 30px; width: 100%">
+			<div class="carousel-caption">
+				<h2>THE PATNITOP INN</h2>
+				<p class="badge badge-dark">A Perfect destination for our Guests.</p>
+			</div>
+			
+		</div>
+	</div>
+	<ul class="carousel-indicators">
+		<li data-target="#myslider" data-slide-to="0" class="active">
+			
+		</li>
+		<li data-target="#myslider" data-slide-to="1">
+			
+		</li>
+		<li data-target="#myslider" data-slide-to="2">
+			
+		</li>
+		<li data-target="#myslider" data-slide-to="3">
+			
+		</li>
+		<li data-target="#myslider" data-slide-to="4">
+			
+		</li>
+		
+	</ul>
+	<a href="#myslider" class="carousel-control-prev" data-slide="prev">
+		<span class="carousel-control-prev-icon ">
+			
+		</span>
+	</a>
+	<a href="#myslider" class="carousel-control-next" data-slide="next">
+		<span class="carousel-control-next-icon">
+			
+		</span>
+	</a><br><br>
+	<!-------------------------------------CONTACT US--------------------------------------------->
+
+	<div class="container-fluid img-contact mt-2">
+		<p class="text-warning font-italic" id="contactus">CONTACT US:</p>
+		<p class="text-white font-weight-bold">THE PATNITOP INN hotel ,Gurgaon</p>
+		<pre class="text-white font-weight-bold">Adjacent to DLF Qutab Enclave,
+Phase-1, Gurgaon -122002| Map
+Email:contact@patnitopinn.com
+Phoneno:+91124455666|+91124455777</pre>
+<p class="text-warning">FOLLOW US:</p>
+ <i class="fab fa-facebook-f fa-fw"style="color:blue; font-size: 2rem;"></i>
+  <i class="fab fa-twitter fa-fw"style="color:blue;font-size: 2rem;"></i>
+  <i class="fab fa-instagram fa-fw "style="color:pink;font-size: 2rem;"></i>
+  <i class="fab fa-linkedin fa-fw "style="color:blue;font-size: 2rem;"></i>
+ <i class="fab fa-pinterest fa-fw" style="color:red;font-size: 2rem;"></i>
+</div>
+
+
+
+</body>
+</html>

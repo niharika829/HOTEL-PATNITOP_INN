@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>card</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		.inner{
+			overflow: hidden;
+		}
+		.inner img{
+			transition: all 1.5s ease;
+		}
+		.inner:hover img{
+			transform: scale(1.5);
+		}
+		.card{
+			overflow: hidden;
+		}
+		.card:hover{
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<h2 class="text-center text-white bg-dark font-italic"> AMENITIES</h2><br>
+
+		<div class="card-columns  row"> 
+		     <div class="card col-lg-5 col-md-5 col-sm-5 col-12 m-auto" >
+		     	<div class="inner">
+		         <img src="image/10.jpg" class="card-img img-fluid" style="height: 150px;"></div>
+		         <div class="card-body">
+			     <h4 class="card-title text-center">LINENS</h4>
+			     <p class="card-text"> we have categorized the rooms into different types such as, Single Seater, Double Seater etc. Each of these halls is spacious, beautifully furnished and equipped with world-class facilities to suit your needs.</p>
+			     <a href="#" class="btn btn-danger btn-outline-danger">BOOK NOW</a>
+		         </div>
+
+		     </div>
+		     <div class="card col-lg-5 col-md-5 col-sm-5 col-12 m-auto" >
+		     	<div class="inner">
+		        <img src="image/d1.jpg" class="card-img img-fluid" style="height: 150px;"></div>
+		        <div class="card-body">
+			    <h4 class="card-title text-center">DINNING</h4>
+			    <p class="card-text"> The menu of the Patnitop Inn restaurant encompasses both, light snacks and complete meals. A well laid out executive buffet for lunch and the lavish dinner buffet, offer a wide variety of choice to satisfy all needs.</p>
+			    <a href="#"  class="btn btn-outline-danger btn-danger">BOOK NOW</a>
+		        </div>
+		
+		    </div>
+	    </div>
+    </div>
+</body>
+</html>

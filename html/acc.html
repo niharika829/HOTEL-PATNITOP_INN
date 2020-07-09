@@ -1,0 +1,765 @@
+<html>
+<head>
+<link rel="icon" href="../main.jpg">
+  <title>myAccount-THE PATNITOP INN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+ 
+   
+    <title></title>
+   <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.3.1023/styles/kendo.default-v2.min.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.3.1023/js/kendo.all.min.js"></script>
+    
+
+
+
+
+
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+<style>
+  body {
+                background: linear-gradient(132deg, #ec5218, #1665c1);
+                background-size: 400% 400%;
+                animation: BackgroundGradient 5s ease infinite;
+            }
+            
+            @keyframes BackgroundGradient {
+                0% {background-position: 0% 50%;}
+                50% {background-position: 100% 50%;}
+                100% {background-position: 0% 50%;}
+            }
+           
+
+
+
+
+label{color:white;}
+
+#output {
+    background-color: #c5edf3;
+    color: #463c39;
+    font-size: 17px;
+    padding: 30px 30px;
+    width: 40%;
+    border: 2px solid #009688;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+#newPublish {
+    background-color: #c5edf3;
+    color: #463c39;
+    font-size: 17px;
+    padding: 30px 30px;
+    width: 40%;
+    border: 2px solid #009688;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+.box {
+    background-color: #f7f7f7;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding: 40px 60px;
+}
+#details_info {
+    background-color: #f7f7f7;
+    color: #463c39;
+    font-size: 17px;
+    padding: 30px 30px;
+    width: 40%;
+    border: 1px solid #cccccc;
+    font-family: sans-serif;
+    line-height: 1.8;
+    margin-left: 90px;
+}
+.box3 {
+    margin-top: 80px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 60px;
+    padding: 40px 50px;
+    background-color: gainsboro;
+}
+.box11 {
+    margin-top: 80px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 60px;
+    padding: 40px 50px;
+    background-color: gainsboro;
+    line-height: 2.5;
+}
+.web_design_box {
+    margin-top: 30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 60px;
+    padding: 40px 50px;
+    background-color: #d9edf7;
+    box-shadow: 3px 5px 10px #318f86;
+}
+.hotel_reserve_box {
+  
+    background-color: #c6badc;
+    box-shadow: 3px 5px 10px #7527b0;
+}
+.online_food_delivery_box {
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    background-color: #d4c0b9;
+    box-shadow: 3px 5px 10px #714c4a;
+}
+.result_box {
+    margin-top: 15%;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    background-color: #d4c0b9;
+    box-shadow: 3px 5px 10px #8BC34A;
+}
+.result_box_text {
+    color: #232222;
+    font-size: 20px;
+    text-align: center;
+    padding-top:10px;
+}
+.result_box_text span {
+    color: #614136;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+
+
+
+
+<!--receipt-->
+input[type="text"]{
+		border-top: none !important;
+		border-right: none !important;
+		border-left: none !important;
+		border-bottom: 1px dotted #2196f3 !important;
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+	}
+	
+	.heading{
+    color: #2196f3;
+}
+
+.control{
+padding-top:7px;
+}
+
+.reciept{
+    border-top: 5px solid #2196f3;
+    -webkit-box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+    box-shadow: 0px 5px 21px -2px rgba(0,0,0,0.47);
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+<!--payment-->
+body { margin-top:20px; }
+.panel-title {display: inline;font-weight: bold;}
+.checkbox.pull-right { margin: 0; }
+.pl-ziro { padding-left: 0px; }
+</style>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+		   <div class="container" >
+		   <div class="row">
+		   	<div class="col-sm-3">
+              
+
+      <div class="text-center">
+        <img src="../pictures/girl.jpg" style="width:50%;height:30%"class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block file-upload">
+      </div></hr><br>
+	 
+		     <ul class="list-group">
+            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+            <li class="list-group-item text-right" id="name_user"><span class="pull-left"><strong>name</strong></span><p id="nm"> {{firstname}} {{lastname}}</p></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>mobile</strong></span><p id="mob"> {{number}}</p></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>email</strong></span> <p id="mail">{{email}}</p></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>location</strong></span><p id="loc"> {{locate}}</p></li>
+          </ul> 
+
+          
+</div>
+<div class="col-sm-6">
+ <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#messages">check availability</a></li>
+                <li><a data-toggle="tab" href="#settings">booking</a></li>
+				 <li><a data-toggle="tab" href="#history">payment history</a></li>
+              </ul>
+	  <div class="tab-content">
+            <div class="tab-pane active" id="home">  
+<div class="container">
+ 
+  <form>
+    <div class="form-group">
+	 <label for="first"> first Name:</label>
+  <input type="text" class="form-control" id="first"  ng-model="firstname" autocomplete='given-name'placeholder="enter first name" title="enter your first name." style="width:60%" disabled required>
+  </div>
+     <div class="form-group">
+   <label for="last"> last Name:</label>
+  <input type="text" class="form-control" id="last"  ng-model="lastname" autocomplete='family-name' placeholder="enter last name" title="enter your last name." style="width:60%" disabled required></div>
+     <div class="form-group">
+   <label for="mobile">Mobile</label>
+                              <input type="text" class="form-control" id="mobile" ng-model="number" autocomplete='tel' placeholder="enter mobile number" title="enter your mobile number if any." style="width:60%"  disabled required>
+                         </div>
+						    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" ng-model="email"autocomplete='email' placeholder="Enter email" name="email" style="width:60%"  disabled required>
+</div>
+   <div class="form-group">
+	 <label for="location">Location:</label>
+  <input type="text" class="form-control" id="location" ng-model="locate" placeholder="enter location" title="enter where you live." style="width:60%"  disabled required>
+  
+    </div>
+	   <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" style="width:60%"  disabled required>
+        </div>
+		   <div class="form-group">
+     <label for="pswd"> verify Password:</label>
+      <input type="password" class="form-control" id="pswd" placeholder="Enter password again" name="pwd" style="width:60%"  disabled required>
+        </div>
+    <button type="submit"class="btn btn-success" onclick="save()">Submit</button>
+	 <button type="submit" id="elementId"class="btn btn-info" >edit</button>
+  </form>
+</div></div>
+
+ <div class="tab-pane" id="messages">
+               
+             <div id="example">
+      <div class="demo-section k-content" style="text-align: center;">
+          <h6>* this calendar shows the booked dates of dining as well as linens </h6>
+          <div id="weekend-calendar"></div>
+
+        
+      </div>
+</div></div>
+
+                 
+               
+             
+             <div class="tab-pane" id="settings">
+            		<div>
+               	 <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#linens">linens</a></li>
+                <li><a data-toggle="tab" href="#dining">dining</a></li>
+                <li><a data-toggle="tab" href="#both">dining & linens</a></li>
+              </ul></div>
+                  <hr>
+                   <div class="tab-content">
+				   <div class="tab-pane" id="linens">
+               
+              
+               
+   
+
+   
+     <div class="hotel_reserve_box"style="border:1px solid black">
+     
+         <form>
+             <div class="form-group">
+                 <label>Room/Suite Type</label>
+                 <select class="form-control" id="room_type" onchange="finalCost()">
+                     <option value="0" selected>Select Room/Suite </option>
+                     <option value="1"> Single</option>
+                     <option value="2"> double </option>
+                     <option value="3"> deuplex </option>
+                     <option value="4"> Apartment </option>
+                    
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of room/suite</label>
+                 <select class="form-control" id="room_number" onchange="finalCost()">
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                     <option value="8"> 8 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of persons</label>
+                 <select class="form-control" id="person_number" onchange="finalCost()">
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                     <option value="8"> 8 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of children</label>
+                 <select class="form-control" id="child_number" onchange="finalCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label >Restaurant facilities?</label>
+                 <select class="form-control" id="res_facilities" onchange="finalCost()">
+                  
+                     <option value="1"selected> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+			  <div class="form-group">
+                 <label>pickup facilities?</label>
+                 <select class="form-control" id="pick_facilities" onchange="finalCost()">
+                   
+                     <option value="1" selected> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+			 <div class="form-group">
+                 <label>tour facilities?</label>
+                 <select class="form-control" id="tour_facilities" onchange="finalCost()">
+                  
+                     <option value="1" selected> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+				<div> <label for="checkin">check-in date</label> <input type="date" class="form-control" id="checkin"><label for="checkin">check-out date</label> <input type="date" class="form-control" id="checkout"></div>
+				
+				
+				
+				  <div class="form-group">
+                 <label>id proof</label>
+                 <select class="form-control"  id="proof"onchange="finalCost()">
+                     <option value="0">  adhaar card</option>
+                     <option value="1"> pan card </option>
+                     <option value="2"> passport </option>
+                     <option value="3"> voter card </option>
+                     <option value="4"> driving licence </option>
+                    
+                 </select>
+				  <h6>Upload a different photo...</h6>
+        <input type="file" class="upload" id="source">
+             </div>
+             <div class="form-group">
+                 <label>Total Cost ($) : </label>
+                <span id="result1"  style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;"> 0</span>  
+           <a href="#"  id="anch1" >  <span onclick="linens()"style="background-color: green;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;"> submit</span>  </a>
+         
+			</div>
+         </form>
+     </div>
+
+
+                 
+               
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="dining">
+            		
+               	 <div class="hotel_reserve_box"style="border:1px solid black">
+      
+         <form>
+             <div class="form-group">
+                 <label>Room/Suite Type</label>
+                 <select class="form-control" id="room_type_dining" onchange="diningCost()" >
+                     <option value="1"> breakfast </option>
+                     <option value="2"> lunch </option>
+                     <option value="3"> dinner </option>
+          
+                     					 </select>
+             </div>
+             <div class="form-group">
+                 <label>type of table</label>
+                 <select class="form-control" id="room_number_dining" onchange="diningCost()">
+                     <option value="0"> 2 seater </option>
+                     <option value="1"> 5 seater </option>
+                     <option value="2"> 10 seater </option>
+                    
+                    
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of persons</label>
+                 <select class="form-control" id="person_number_dining" onchange="diningCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of children</label>
+                 <select class="form-control" id="child_number_dining" onchange="diningCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div> <label for="date">date</label> <input type="date" class="form-control" id="date"><label for="time">time</label> <input type="time" class="form-control" id="time"></div>
+			 
+			 
+			 <div class="form-group">
+                 <label>pickup facilities?</label>
+                 <select class="form-control" id="res_facilities_dining" onchange="diningCost()">
+                     <option value="0" selected> Do you want pickup facilities? </option>
+                     <option value="1"> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+			  <div class="form-group">
+                 <label>id proof</label>
+                 <select class="form-control"  id="proof_dining">
+                     <option value="0">  adhaar card</option>
+                     <option value="1"> pan card </option>
+                     <option value="2"> passport </option>
+                     <option value="3"> voter card </option>
+                     <option value="4"> driving licence </option>
+                    
+                 </select>
+				  <h6>Upload a different photo...</h6>
+        <input type="file" class="upload" id="sr_dining">
+             </div>
+             <div class="form-group">
+                 <label>Total Cost ($) : </label>
+                  <span id="result2" style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">0</span>
+             <a href="#" id="anch2"> <span onclick="dining()" style="background-color: green;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;">submit</span></a>
+            
+			 </div>
+         </form>
+     </div>
+
+                  
+              </div>
+			  
+			  
+			  
+			  
+			   <div class="tab-pane" id="both">
+            		 <div class="hotel_reserve_box"style="border:1px solid black">
+
+         <form>
+             <div class="form-group">
+                 <label>Room/Suite Type</label>
+                 <select class="form-control" id="room_type_both" onchange="bothCost()">
+                     <option value="0" selected>Select Room/Suite </option>
+                     <option value="1"> Single</option>
+                     <option value="2"> double </option>
+                     <option value="3"> deuplex </option>
+                     <option value="4"> apartment </option>
+                    
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of room/suite</label>
+                 <select class="form-control" id="room_number_both" onchange="bothCost()">
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                     <option value="8"> 8 </option>
+                 </select>
+             </div>
+			  <div class="form-group">
+                 <label>food Type</label>
+				 
+                 <select class="form-control" id="food_type_both" onchange="bothCost()" >
+                     <option value="1"> breakfast  </option>
+                     <option value="2"> lunch  </option>
+                     <option value="3"> dinner  </option>
+                     					 </select>
+             </div>
+			    <div> <label for="date">date for the above category</label> <input type="date" class="form-control" id="date_both"><label for="time">time for the above category</label> <input type="time" class="form-control" id="time_both"></div>
+			 
+             <div class="form-group">
+                 <label>type of table</label>
+                 <select class="form-control" id="table_number_both" onchange="bothCost()">
+                     <option value="1"> 2 seater </option>
+                     <option value="2"> 5 seater </option>
+                     <option value="3"> 10 seater </option>
+                   
+                    
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of persons</label>
+                 <select class="form-control" id="person_number_both" onchange="bothCost()">
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                     <option value="8"> 8 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of children</label>
+                 <select class="form-control" id="child_number_both" onchange="bothCost()">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label >Restaurant facilities?</label>
+                 <select class="form-control" id="res_facilities_both" onchange="bothCost()">
+                  
+                     <option value="1"selected> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+			  <div class="form-group">
+                 <label>pickup facilities?</label>
+                 <select class="form-control" id="pick_facilities_both" onchange="bothCost()">
+                   
+                     <option value="1" selected> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+			 <div class="form-group">
+                 <label>tour facilities?</label>
+                 <select class="form-control" id="tour_facilities_both" onchange="bothCost()">
+                  
+                     <option value="1" selected> Yes </option>
+                     <option value="0"> No </option>
+                 </select>
+             </div><br>
+				<div> <label for="checkin">check-in date</label> <input type="date" class="form-control" id="checkin_both"><label for="checkin">check-out date</label> <input type="date" class="form-control" id="checkout_both"></div>
+				
+				
+				
+				  <div class="form-group">
+                 <label>id proof</label>
+                 <select class="form-control"  id="proof_both"onchange="bothCost()">
+                     <option value="0">  adhaar card</option>
+                     <option value="1"> pan card </option>
+                     <option value="2"> passport </option>
+                     <option value="3"> voter card </option>
+                     <option value="4"> driving licence </option>
+                    
+                 </select>
+				  <h6>Upload a different photo...</h6>
+        <input type="file" class="upload" id="source_both">
+             </div>
+             <div class="form-group">
+                 <label>Total Cost ($) : </label>
+                <span id="result3"  style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;"> 0</span>  
+           <a href="#"  id="anch3" >  <span onclick="both()"style="background-color: green;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 10px;border-radius: 5px;"> submit</span>  </a>
+         
+			</div>
+         </form>
+     </div>
+
+               	
+
+              </div>
+				  
+				 </div> 
+				  
+              </div>
+  <div class="tab-pane" id="history">
+  
+ 
+
+<div class="container" >
+<div class="reciept"style="width:80%">
+	<div class="row" style="margin-top:10px;">
+		<div class="col-md-3">
+			<div class="col-md-3">
+            <img class="media-object img-thumbnail user-img" style="height: 80px;" alt="User Picture" src="http://via.placeholder.com/80x80"></div>
+		 
+		</div>
+		<div class="col-md-4">
+			
+			<div class="form-group">
+              <label class="col-md-4 control" >Date :</label>
+              <div class="col-md-8">
+                <input id="1" name="name" type="text" placeholder="10-May-2017 02:05 pm" class="form-control">
+              </div>
+            </div>
+		                
+		    <div class="form-group">
+              <label class="col-md-4 control" >Reciept No. :</label>
+              <div class="col-md-8">
+                <input id="2" name="name" type="text" placeholder="12349" class="form-control">
+              </div>
+            </div>
+		                
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col-md-8">
+            <div class="form-group">
+              <label class="col-md-3 control" for="">Student Name :</label>
+              <div class="col-md-9">
+                <input id="3" name="name" type="text" placeholder="Your name" class="form-control">
+              </div>
+            </div>
+			<div class="form-group">
+              <label class="col-md-3 control" for="">Course :</label>
+              <div class="col-md-9">
+                <input id="4" name="name" type="text" placeholder="Course" class="form-control">
+              </div>
+            </div>
+         </div>
+     </div>
+	 <div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+              <label class="col-md-6 control" for="" >Section :</label>
+              <div class="col-md-6" >
+                <input id="5" name="name" type="text" placeholder="Section" class="form-control" style="width:90%">
+              </div>
+            </div>
+            </div>
+			<div class="col-md-7">
+			<div class="form-group">
+              <label class="col-md-2 control" for="" >Batch :</label>
+              <div class="col-md-5" >
+                <input id="6" name="name" type="text" placeholder="Batch" class="form-control"  style="width:90%">
+              </div>
+            </div>
+            </div>
+            </div>
+	<div class="row">
+		<div class="col-md-8">
+			<div class="form-group">
+              <label class="col-md-3 control" for="name">Recieve Amount :</label>
+              <div class="col-md-9">
+                <input id="7" name="name" type="text" placeholder="Amount" class="form-control">
+              </div>
+            </div>
+            </div>
+            </div>
+			<br/>
+			<div class="row">
+		
+		 <div class="col-md-8">
+			<div class="form-group">
+              <label class="col-md-3 control">Bank Name :</label>
+              <div class="col-md-9">
+                <input id="8" name="name" type="text" placeholder="State Bank of India" class="form-control">
+              </div>
+            </div>
+			<div class="form-group">
+              <label class="col-sm-3 control" >Cheque No :</label>
+              <div class="col-sm-9">
+                <input id="9" name="name" type="text" placeholder="Cheque no" class="form-control">
+              </div>
+            </div>
+			<div class="form-group">
+              <label class="col-sm-3 control" >Date :</label>
+              <div class="col-sm-9">
+                <input id="10" name="name" type="text" placeholder="Date" class="form-control">
+              </div>
+            </div>
+		 </div>
+            </div>
+			<br/>
+			<div class="row">
+		<div class="col-md-8">
+			<div class="form-group">
+              <label class="col-md-3 control" for="name">Recieved By :</label>
+              <div class="col-md-9">
+                <input id="11" name="name" type="text" placeholder="Authorised Person" class="form-control">
+              </div>
+            </div>
+		</div>
+		</div>
+		<div class="row" style="margin-top:80px;">
+	
+		<div class="col-md-3">
+			<div class="form-group">
+              <label class="control" for="name"><u>Authorised Signatury</u></label>
+            </div>
+		</div>
+		</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+</div>
+  </div>
+ 
+
+
+
+
+
+</div>
+</div></div>
+<script src="../js/acc.js">
+
+
+</script>
+
+</body>
+</html>

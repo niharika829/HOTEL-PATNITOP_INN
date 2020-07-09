@@ -1,0 +1,142 @@
+.menu{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+}
+
+.menu:hover{
+    background: #333;
+    color: white;
+}
+
+.banner{
+    background:linear-gradient(0deg,rgba(8, 8, 8, 0.5),rgba(12, 12, 12, 0.5)),url('./images/b1.jpg');
+    min-height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.intro{
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Monoton', cursive;
+}
+
+.intro2{
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  
+}
+
+.about{
+    margin-top: 80px;
+}
+
+.about2{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.about4{
+    background-color: #dcdcdc;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.card1{
+    background-color: black;
+    font-size: 20px;
+}
+
+.card2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.footer{
+    background-color: #696969}
+
+.btn-facebook {
+    background: #3B5998;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #263961; 
+}
+.btn-facebook:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+
+.btn-google {
+    background: #DD4B39;
+    color: white;
+}
+
+.btn-google:hover{
+    color: #e64522;
+    background: #fff;
+    border-color: #e64522;
+}
+
+.btn-linkedin {
+    background: #0E76A8;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #084461;
+}
+
+.btn-linkedin:hover{
+    color: #0094BC;
+    background: #fff;
+    border-color: #0094BC;
+}
+
+.btn-twitter {
+    background: #00ACEE;
+    border-radius: 0;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0075a2;
+}
+
+.btn-twitter:hover{
+    color: #00ABE3;
+    background: #fff;
+    border-color: #00ABE3;
+}
+
+.e{
+    background-color: white;
+}
+
+

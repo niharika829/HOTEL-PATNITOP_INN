@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ 
+
+     
+<title>login-THE PATNITOP INN</title>
+<link rel="icon" href="../main.jpg">
+<style>
+.nav-link{
+	 font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 8px;
+  margin-right:5px;
+}
+.navbar-brand{
+	
+	 font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+
+   background: url('../pictures/sign.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+   margin: 0 !important;
+   background-size: 100% cover!important;
+ 
+}
+form {
+width:40%;
+margin-top:5%;background-color:white;}
+
+input[type=text], input[type=password] , input[type=email] {
+  width: 80%;
+  padding: 12px 20px;
+
+  display: inline-block;
+
+  
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+.container {
+width:100%;
+  padding: 16px;
+}
+
+span.psw {
+
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  button {
+     width: 100%;
+  }
+}
+#forget{
+
+display:none}
+#formsignup{
+
+display:none}
+
+</style>
+</head>
+<body>
+<div id="nav"> <nav  class="navbar navbar-expand-md bg-dark navbar-dark">
+ <a class="navbar-brand" href="../bootstrap/index1.html"><img src="../main.jpg" style="height:80px"></a><!----------------------------connect with main page---------------------------------------------->
+  
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+	   <li class="nav-item" >
+        <button type="button" class="btn btn-outline-warning" > <a class="nav-link" href="../bootstrap/index1.html">THE PATNITOP INN</a></button><!----------------connect with main page-------------->
+      </li>  
+	  <li class="nav-item">
+      <button type="button" class="btn btn-outline-info"><a class="nav-link" href="linens.html">linens</a></button>
+	  </li>	  
+ <li class="nav-item" >
+        <button type="button" class="btn btn-outline-success" > <a class="nav-link" href="../index.html">dining</a></button><!----------------------------connect with dining------------>
+      </li>  
+	  <li class="nav-item">
+      <button type="button" class="btn btn-outline-danger"><a class="nav-link" href="gallery.html">bar gallery</a></button>
+	  </li>	  	  
+ 
+    </ul>
+  </div>  
+</nav></div>
+<section>
+<center>
+
+
+
+<form method="post" action="acc.html"id="form" style="padding:3%">
+<h2>Sign in</h2>
+  
+
+  
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id="loginid"required><br></br>
+
+    <label for="psw"><b>Password</b></label>
+	<input type="password" placeholder="Enter Password" name="psw" id="loginpswd"required><br><br><br>
+        
+    <button type="submit" class="btn btn-success" style="width:40%;padding:2%;" onclick="check()" id="btn">Success</button><br>
+	
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  
+
+  <div class="container" style="background-color:#f1f1f1">
+      
+  <button type="button" class="btn btn-info" onclick="member()">new member</button>
+    <button type="button" onclick="forgot()"class="btn btn-default">forgot password?</button>
+  </div>
+</form>
+
+</center>
+</section>
+
+<section id="forget">
+<center>
+
+
+
+
+
+
+
+<form method="post" id="form">
+<h2>reset password</h2>
+
+  <label for="email"><b>Email Address</b></label>
+    <input type="email" placeholder="Enter email" name="email" required><br></br>
+  
+       
+    <button type="submit" class="btn btn-success" style="width:40%;padding:2%;" onclick="reset()">Success</button><br>
+  
+  
+
+  <div class="container" style="background-color:#f1f1f1">
+    
+    <button type="button" onclick="backtologin()"class="btn btn-default">back</button>
+  </div>
+</form>
+	</center>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section>
+<center>
+<form method="post" id="formsignup" style="padding:3%">
+<h2>Sign up</h2>
+ 
+  
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="nameup"name="uname" required><br></br>
+	
+	  <label for="email"><b>your Email</b></label>
+    <input type="email" placeholder="Enter email" id="emailup"name="email" required><br></br>
+  
+       
+
+    <label for="psw"><b>Password</b></label>
+	<input type="password" placeholder="Enter Password" id="psw"name="psw" required><br><br>
+	 <label for="psw"><b> verification</b></label>
+	<input type="password" placeholder="Enter Password"id="password" name="password" required><br><br><br>
+        
+    <button type="submit" class="btn btn-success" style="width:40%;padding:2%;" onclick="verification()">Sign up</button><br>
+  
+  
+
+  <div class="container" style="background-color:#f1f1f1">
+      
+  
+    <button type="button" onclick="backtologin()"class="btn btn-default">back</button>
+  </div>
+</form>
+
+</center>
+</section>
+
+
+
+
+
+
+
+
+
+
+  
+
+<script>
+function verification(){
+var pass1=document.getElementById("psw").value;
+var pass2=document.getElementById("password").value;
+var nameup=document.getElementById("nameup").value;
+var emailup=document.getElementById("emailup").value;
+if((emailup.length===0)||(nameup.length===0)||(pass2.length===0)||(pass1.length===0)){
+alert("please fill all the details")
+}
+else if(pass1 === pass2){
+alert("account successfuly created.");
+var interval=setInterval(backtologin, 2000);
+
+}
+else{alert("both the passwords doesn't match!! please check again");}
+}
+
+
+
+
+function myFunction(){
+document.getElementById("btn").disabled=false;
+}
+
+function check(){
+var name=document.getElementById("loginid").value;
+var psw=document.getElementById("loginpswd").value;
+
+if(((name === "saurav")&& (psw === "saurav123")) || ((name === "sourav")&& (psw === "sourav123")) || ((name === "neha")&& (psw === "neha123"))){
+
+
+  alert("login successful!!!");
+  
+}
+else{alert("invalid username or password")
+document.getElementById("btn").disabled=true;
+setInterval(myFunction, 6000);
+}
+}
+
+function member(){
+document.getElementById("formsignup").style.display="block";
+document.getElementById("form").style.display="none";
+}
+function forgot(){
+document.getElementById("forget").style.display="block";
+document.getElementById("form").style.display="none";
+document.getElementById("formsignup").style.display="none";
+
+
+}
+function backtologin(){
+document.getElementById("formsignup").style.display="none";
+
+document.getElementById("forget").style.display="none";
+document.getElementById("form").style.display="block";
+clearInterval(interval);
+}
+
+</script>
+</body>
+</html>
